@@ -1,0 +1,21 @@
+import setuptools
+
+with open("README.md", "r") as fh:
+    long_description = fh.read()
+
+setuptools.setup(
+    name="swa check-in",
+    version="0.0.1",
+    author="Rupee",
+    author_email="bhochhi@gmail.com",
+    description="A small app to check-in southwest airline",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
+    url="https://github.com/bhochhi/swa-checkin",
+    packages=setuptools.find_packages(),
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+    ],
+)
