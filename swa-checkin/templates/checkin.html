@@ -11,7 +11,7 @@
 </head>
 
 <body>
-<form class="form-signin">
+<form class="form-signin" onsubmit="return validateForm" action="/checkin" method="post">
     <img class="mb-4" src="../static/images/sw.svg" alt="">
     <h1 class="h3 mb-3 font-weight-normal">Enter passenger information.</h1>
     <label for="confirmationNumber" class="sr-only">Confirmation # *</label>
@@ -30,9 +30,10 @@
     <input type="tel" id="phoneNumber" class="form-control" placeholder="Phone Number">
 
 
-    <button class="btn btn-lg btn-primary btn-block" type="submit">Check In</button>
+    <button class="btn btn-lg btn-primary btn-block" type="submit" id="btnCheckin" >Check In</button>
     <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
 </form>
-
+<script src="../static/jquery.js"></script>
+<script src="../static/checkin.js"></script>
 </body>
 </html>
