@@ -11,26 +11,28 @@
 </head>
 
 <body>
-<form class="form-signin" onsubmit="return validateForm" action="/checkin" method="post">
+<form class="form-signin" action="{{ url_for('checkin') }}" method="post">
     <img class="mb-4" src="../static/images/sw.svg" alt="">
     <h1 class="h3 mb-3 font-weight-normal">Enter passenger information.</h1>
     <label for="confirmationNumber" class="sr-only">Confirmation # *</label>
-    <input type="text" id="confirmationNumber" class="form-control" placeholder="Confirmation #" required autofocus>
+    <input type="text" id="confirmationNumber" name="confirmationNumber" class="form-control" placeholder="Confirmation #" required autofocus>
 
     <label for="firstName" class="sr-only">FIRST NAME *</label>
-    <input type="text" id="firstName" class="form-control" placeholder="First name" required autofocus>
+    <input type="text" id="firstName" name="firstName" class="form-control" placeholder="First name" required autofocus>
 
     <label for="lastName" class="sr-only">LAST NAME *</label>
-    <input type="text" id="lastName" class="form-control" placeholder="Last name" required autofocus>
+    <input type="text" id="lastName" name="lastName" class="form-control" placeholder="Last name" required autofocus>
 
-    <label for="inputEmail" class="sr-only">Email address</label>
-    <input type="email" id="inputEmail" class="form-control" placeholder="Email address" autofocus>
+    <label for="email" class="sr-only">Email address</label>
+    <input type="email" id="email" name="email" class="form-control" placeholder="Email address" autofocus>
 
     <label for="phoneNumber" class="sr-only">Phone Number</label>
-    <input type="tel" id="phoneNumber" class="form-control" placeholder="Phone Number">
+    <input type="tel" id="phoneNumber" name="phoneNumber" class="form-control" placeholder="Phone Number">
 
+    <label for="scheduleDate" class="sr-only">Schedule Date</label>
+    <input type="datetime-local" id="scheduleDate" name="scheduleDate" class="form-control" placeholder="When do you want to checkin?" required>
 
-    <button class="btn btn-lg btn-primary btn-block" type="submit" id="btnCheckin" >Check In</button>
+    <button class="btn btn-lg btn-primary btn-block" type="submit" id="btnCheckin" >Schedule</button>
     <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
 </form>
 <script src="../static/jquery.js"></script>
