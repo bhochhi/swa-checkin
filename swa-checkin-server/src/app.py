@@ -1,5 +1,6 @@
 from flask import Flask, render_template, json, request
-pm = __import__('data_manager')
+import data_manager as dm
+import job_manager as jm
 app = Flask(__name__)
 
 @app.route("/")
@@ -17,11 +18,15 @@ def checkin():
     _email = request.form.get('email')
     _date = request.form.get('scheduleDate')
     print("Entry:==> {0}, {1}, {2}, {3}, {4}, {5}".format(_confirmationNumber,_fName,_lName, _email,_phoneNumber,_date))
-    if pm.create_new_entry(request.form):
+    print(request.form)
+    if dm.create_new_entry(request.form):
+        #TODO create job and scheduled.
+
         return '<span>You are all set!! Scheduled to checkin at '+_date+'</span>'
     return '<span>Something went wrong</span>'
 
 
 
 if __name__ == "__main__":
-    app.run()
+    jm.job_manager()
+    app.run(debug=True)
