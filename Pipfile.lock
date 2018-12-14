@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "3b2b3790ec2dbf7bd0b8bb0dc2d8186c9a42e6a0240a79c7abf001c1d61c400a"
+            "sha256": "10d9cafc388d89b9b92a7503d9dc9642c8f45374f09cf624e71d7d6e821d5f08"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -52,13 +52,6 @@
             ],
             "index": "pypi",
             "version": "==1.0.2"
-        },
-        "flask-apscheduler": {
-            "hashes": [
-                "sha256:7911d66e449f412d92a1a6c524217f44f4c40a5c92148c60d5189c6c402f87d0"
-            ],
-            "index": "pypi",
-            "version": "==1.11.0"
         },
         "idna": {
             "hashes": [
@@ -166,13 +159,6 @@
             ],
             "index": "pypi",
             "version": "==1.2.4"
-        },
-        "python-dateutil": {
-            "hashes": [
-                "sha256:063df5763652e21de43de7d9e00ccf239f953a832941e37be541614732cdfc93",
-                "sha256:88f9287c0174266bb0d8cedd395cfba9c58e87e5ad86b2ce58859bc11be3cf02"
-            ],
-            "version": "==2.7.5"
         },
         "pytz": {
             "hashes": [
