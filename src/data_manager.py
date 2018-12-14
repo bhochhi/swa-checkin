@@ -1,12 +1,18 @@
-from flask import json, current_app
+from flask import json, current_app, jsonify
 import os
 
 
 def load_scheduled_list():
     # filename = os.path.join(current_app.static_folder, 'data.json')
-    with open('data.json') as json_file:
-        data = json.load(json_file)
-        return data
+    if os.path.exists("data.json"):
+        with open('data.json') as json_file:
+            data = json.load(json_file)
+            return data
+    else:
+        with open('data.json', 'w') as json_file:
+            data = []
+            json.dump(data, json_file)
+            return data
 
 
 def create_new_entry(data):

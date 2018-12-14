@@ -10,7 +10,7 @@ if __name__ == '__main__':
    phoneNumber="4050000000"
 
    try:
-       driver = webdriver.Chrome('../chromedriver')
+       driver = webdriver.Chrome('./chromedriver')
        driver.get("https://www.southwest.com/air/check-in/")
        driver.implicitly_wait(2)
        elem = driver.find_element_by_id("confirmationNumber")

@@ -6,12 +6,12 @@
 
     <link href="{{url_for('static', filename='bs/css/bootstrap.min.css')}}" rel="stylesheet">
 
-    <link href="{{url_for('static', filename='signup.css')}}" rel="stylesheet"/>
+    <link href="{{url_for('static', filename='checkin.css')}}" rel="stylesheet"/>
 
 </head>
 
 <body>
-<form class="form-signin" action="{{ url_for('checkin') }}" method="post">
+<form class="form-checkin" name="form-checkin" action="{{ url_for('checkin') }}" method="post">
     <img class="mb-4" src="../static/images/sw.svg" alt="">
     <h1 class="h3 mb-3 font-weight-normal">Enter passenger information.</h1>
     <label for="confirmationNumber" class="sr-only">Confirmation # *</label>
@@ -30,11 +30,12 @@
     <input type="tel" id="phoneNumber" name="phoneNumber" class="form-control" placeholder="Phone Number">
 
     <label for="scheduleDate" class="sr-only">Schedule Date</label>
-    <input type="datetime-local" id="scheduleDate" name="scheduleDate" class="form-control" placeholder="When do you want to checkin?" required>
+    <input type="datetime-local" id="scheduleDate" name="scheduleDate" class="form-control" placeholder="When do you want to checkin?">
 
     <button class="btn btn-lg btn-primary btn-block" type="submit" id="btnCheckin" >Schedule</button>
     <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
 </form>
+
 <script src="../static/jquery.js"></script>
 <script src="../static/checkin.js"></script>
 </body>

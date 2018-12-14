@@ -1,0 +1,61 @@
+from flask import Flask, render_template, json, request
+from werkzeug.datastructures import ImmutableMultiDict
+from datetime import datetime
+import data_manager as dm
+from job_manager import scheduler
+
+app = Flask(__name__)
+
+
+@app.route("/")
+def signup():
+    return render_template('checkin.html')
+
+
+@app.route('/checkin', methods=['POST'])
+def checkin():
+    # read the posted values from the UI
+    # form = request.form.convert_to_dict()
+    _confirmationNumber = request.form.get('confirmationNumber')
+    _fName = request.form.get('firstName')
+    _lName = request.form.get('lastName')
+    _phoneNumber = request.form.get('phoneNUmber')
+    _email = request.form.get('email')
+    _date = request.form.get('scheduleDate')
+    print("Entry:==> {0}, {1}, {2}, {3}, {4}, {5}".format(_confirmationNumber, _fName, _lName, _email, _phoneNumber,
+                                                          _date))
+    print(request.form)
+    if dm.create_new_entry(request.form):
+        # TODO create job and scheduled.
+        # TODO create job and scheduled.
+        scheduler.start_scheduler()
+        scheduler.schedule_job(request.form)
+        return '<span>You are all set!! Scheduled to checkin at ' + _date + '</span>'
+    return '<span>Something went wrong</span>'
+
+
+def checkintest():
+
+    # read the posted values from the UI
+    form = ImmutableMultiDict([('confirmationNumber', 'dsds'), ('firstName', 'Rupesh'), ('lastName', 'Bhochhibhoya'),
+                               ('email', 'bhochhi@aol.com'), ('phoneNumber', '4053121309'),
+                               ('scheduleDate', datetime.now())])
+    form.to_dict(flat=True)
+
+    _confirmationNumber = form.get('confirmationNumber')
+    _fName = form.get('firstName')
+    _lName = form.get('lastName')
+    _phoneNumber = form.get('phoneNUmber')
+    _email = form.get('email')
+    _date = form.get('scheduleDate')
+    print("Entry:==> {0}, {1}, {2}, {3}, {4}, {5}".format(_confirmationNumber, _fName, _lName, _email, _phoneNumber, _date))
+    if dm.create_new_entry(form):
+        # TODO create job and scheduled.
+        scheduler.schedule_job(form)
+        return '<span>You are all set!! Scheduled to checkin at ' + _date + '</span>'
+    return '<span>Something went wrong</span>'
+
+if __name__ == "__main__":
+    scheduler.start_scheduler()
+    app.run(debug=True)
+    # checkintest()

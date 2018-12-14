@@ -1,9 +1,6 @@
 
 
 
-def job_manager():
-    print("Th is job Manager")
-
 def save_new_entry():
     print("Saving into db")
 
@@ -15,3 +12,5 @@ def job_execution_listener(): #this listens the execution completion success or 
 
 def send_email(): # this should send the email once job is completed.
     print("Sending email to client")
+
+

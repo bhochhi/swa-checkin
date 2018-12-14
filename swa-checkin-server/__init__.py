@@ -1,1 +1,0 @@
-name = "swa-checkin-server"
