@@ -2,16 +2,16 @@ import logging
 from datetime import datetime, timedelta
 from flask import json, current_app, jsonify
 
-from apscheduler.schedulers.blocking import BlockingScheduler
+from apscheduler.schedulers.background import BackgroundScheduler
 
-schedr = BlockingScheduler()
+schedr = BackgroundScheduler()
 
 def start_scheduler():
 
     # schedr.configure({'apscheduler.daemonic': False})
     logging.info("Starting Scheduler")
     print("------****------Starting Scheduler------****------")
-    schedr.init_app(current_app)
+    # schedr.init_app(current_app)
     schedr.add_jobstore('mongodb', collection='active_jobs', database='swacheckin')
     try:
         schedr.start()

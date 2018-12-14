@@ -3,8 +3,30 @@ from werkzeug.datastructures import ImmutableMultiDict
 from datetime import datetime
 import data_manager as dm
 from job_manager import scheduler
+# from flask_apscheduler import APScheduler
+
 
 app = Flask(__name__)
+
+class Config(object):
+    JOBS = [
+        {
+            'id': 'job1',
+            'func': 'app:job1',
+            'args': (1, 2),
+            'trigger': 'interval',
+            'seconds': 10
+        }
+    ]
+
+    SCHEDULER_API_ENABLED = True
+
+def job1(a, b):
+    print(str(a) + ' ' + str(b))
+
+def alarm(message="default message"):
+    print('Alarm! This alarm was scheduled at {0}.'.format(message))
+
 
 
 @app.route("/")
@@ -28,14 +50,13 @@ def checkin():
     if dm.create_new_entry(request.form):
         # TODO create job and scheduled.
         # TODO create job and scheduled.
-        scheduler.start_scheduler()
+        # scheduler.start_scheduler()
         scheduler.schedule_job(request.form)
         return '<span>You are all set!! Scheduled to checkin at ' + _date + '</span>'
     return '<span>Something went wrong</span>'
 
 
 def checkintest():
-
     # read the posted values from the UI
     form = ImmutableMultiDict([('confirmationNumber', 'dsds'), ('firstName', 'Rupesh'), ('lastName', 'Bhochhibhoya'),
                                ('email', 'bhochhi@aol.com'), ('phoneNumber', '4053121309'),
@@ -48,14 +69,19 @@ def checkintest():
     _phoneNumber = form.get('phoneNUmber')
     _email = form.get('email')
     _date = form.get('scheduleDate')
-    print("Entry:==> {0}, {1}, {2}, {3}, {4}, {5}".format(_confirmationNumber, _fName, _lName, _email, _phoneNumber, _date))
+    print("Entry:==> {0}, {1}, {2}, {3}, {4}, {5}".format(_confirmationNumber, _fName, _lName, _email, _phoneNumber,
+                                                          _date))
     if dm.create_new_entry(form):
         # TODO create job and scheduled.
+        # scheduler.add_job(id=_confirmationNumber, func='app:alarm', args=["Hellos"], trigger='interval')
         scheduler.schedule_job(form)
         return '<span>You are all set!! Scheduled to checkin at ' + _date + '</span>'
     return '<span>Something went wrong</span>'
 
+
 if __name__ == "__main__":
+
+    #
     scheduler.start_scheduler()
     app.run(debug=True)
     # checkintest()
