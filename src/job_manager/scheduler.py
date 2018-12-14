@@ -1,17 +1,14 @@
 import logging
 from datetime import datetime, timedelta
-from flask import json, current_app, jsonify
-
+import crawler
 from apscheduler.schedulers.background import BackgroundScheduler
 
 schedr = BackgroundScheduler()
 
-def start_scheduler():
 
-    # schedr.configure({'apscheduler.daemonic': False})
-    logging.info("Starting Scheduler")
+def start_scheduler():
+    logging.info("Starting Scheduler")  # TODO: why logging not working?
     print("------****------Starting Scheduler------****------")
-    # schedr.init_app(current_app)
     schedr.add_jobstore('mongodb', collection='active_jobs', database='swacheckin')
     try:
         schedr.start()
@@ -20,15 +17,14 @@ def start_scheduler():
 
 
 def schedule_job(entry):
-    # TODO: make sure scheduler is started
-    print("Creating job, storing into db and schedule to trigger by date.{0}".format(entry))
-
-    alarm_time = datetime.now() + timedelta(seconds=5)
-    print("will run the job at: {0}".format(alarm_time))
-    schedr.add_job(alarm, 'date', run_date=alarm_time, args=[datetime.now(), 'Hello world', alarm_time, entry])
-    print(schedr.print_jobs())
-
+    print("Creating job, stored into db and schedule to trigger by date.{0}".format(entry))
+    alarm_time = datetime.now() + timedelta(seconds=5)  # Testing
+    print("Your job will run the job at: {0}".format(alarm_time))
+    schedr.add_job(crawler.crawl_checkin_page, 'date', run_date=alarm_time, args=[entry['confirmationNumber'],entry['firstName'],entry['lastName'],entry['phoneNumber']])
 
 
 def alarm(time, message="default message", run_date="", entry={}):
-    print('Alarm! This alarm was scheduled at {0}. with message {1} executed at {2} for entry: {3}'.format(time, message, run_date,entry))
+    print(
+        'Alarm! This alarm was scheduled at {0}. with message {1} executed at {2} for entry: {3}'.format(time, message,
+                                                                                                         run_date,
+                                                                                                         entry))
