@@ -4,3 +4,7 @@ function validateForm(event){
 //    document.forms["form-checkin"]["scheduleDate"].value = new Date()
     return true;
 }
+
+window.onload = function(){
+    document.getElementById("scheduleDate").defaultValue = Date.now()
+}

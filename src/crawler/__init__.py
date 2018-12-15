@@ -5,7 +5,7 @@ import sys
 
 def crawl_checkin_page(confirmationNumber, passengerFirstName, passengerLastName, phoneNumber):
     try:
-        driver = webdriver.Chrome('./chromedriver')
+        driver = webdriver.Chrome(r'./chromedriver')
         driver.get("https://www.southwest.com/air/check-in/")
         driver.implicitly_wait(2)
         elem = driver.find_element_by_id("confirmationNumber")
@@ -44,7 +44,7 @@ def crawl_checkin_page(confirmationNumber, passengerFirstName, passengerLastName
         elem.send_keys(phoneNumber)
         elem = driver.find_element_by_id("form-mixin--submit-button")
         elem.click()
-        print("All good!! you will be getting confirmation text")
+        print("All good!! you will be getting confirmation text. Customer should get text")
         return True
     except NoSuchElementException as e:
         print('!!' + str(e))
