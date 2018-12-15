@@ -22,9 +22,3 @@ def schedule_job(entry):
     print("Your job will run the job at: {0}".format(alarm_time))
     schedr.add_job(crawler.crawl_checkin_page, 'date', run_date=alarm_time, args=[entry['confirmationNumber'],entry['firstName'],entry['lastName'],entry['phoneNumber']])
 
-
-def alarm(time, message="default message", run_date="", entry={}):
-    print(
-        'Alarm! This alarm was scheduled at {0}. with message {1} executed at {2} for entry: {3}'.format(time, message,
-                                                                                                         run_date,
-                                                                                                         entry))

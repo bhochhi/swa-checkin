@@ -11,7 +11,6 @@ selenium = "*"
 flask = "*"
 apscheduler = "*"
 pymongo = "*"
-pyside = "*"
 
 [requires]
 python_version = "3.7"
