@@ -1,10 +1,7 @@
 
-function validateForm(event){
-//    console.log(document.forms)
-//    document.forms["form-checkin"]["scheduleDate"].value = new Date()
-    return true;
-}
+$(document).ready(function() {
+   $('#scheduleDate').datetimepicker();
+});
 
-window.onload = function(){
-    document.getElementById("scheduleDate").defaultValue = Date.now()
-}
+
+

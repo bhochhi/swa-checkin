@@ -6,11 +6,11 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
-requests = "*"
 selenium = "*"
 flask = "*"
 apscheduler = "*"
 pymongo = "*"
+gunicorn = "*"
 
 [requires]
 python_version = "3.7"
