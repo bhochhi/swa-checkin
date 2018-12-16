@@ -23,7 +23,7 @@ def checkin():
     print(request.form)
     if dm.create_new_entry(request.form):
         scheduler.schedule_job(request.form)
-        return '<span>You are all set!! Scheduled to checkin at ' + _date + '</span>'
+        return '<span>You are all set!! Scheduled to checkin at ' + str(_date) + '</span>'
     return '<span>Something went wrong</span>'
 
 

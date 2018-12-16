@@ -1,5 +1,6 @@
-from flask import json, current_app, jsonify
 import os
+
+from flask import json
 
 
 def load_scheduled_list():

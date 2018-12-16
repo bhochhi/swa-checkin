@@ -27,6 +27,7 @@ def crawl_checkin_page(confirmationNumber, passengerFirstName, passengerLastName
         elem = driver.find_element_by_id("form-mixin--submit-button")
         elem.click()
         driver.implicitly_wait(5)
+        print('Submitted information to sw for check-in')
     except Exception as e:
         print(e)
         print('something went wrong')
@@ -35,12 +36,14 @@ def crawl_checkin_page(confirmationNumber, passengerFirstName, passengerLastName
         raise e
     try:
         elem = driver.find_element_by_class_name("air-check-in-review-results--confirmation")
+        print('Redirected to confirmation page')
     except NoSuchElementException as e:
         print('unable to continue check-in process' + str(e))
         driver.quit()
         sys.exit(1)
         raise e
     try:
+        print('entering phoneNumber for boarding pass to be texted')
         elem = driver.find_element_by_class_name("air-check-in-review-results--check-in-button")
         elem.click()
         driver.implicitly_wait(5)
