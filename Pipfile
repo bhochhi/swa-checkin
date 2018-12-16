@@ -11,6 +11,7 @@ flask = "*"
 apscheduler = "*"
 pymongo = "*"
 gunicorn = "*"
+flask-mondodb = "*"
 
 [requires]
 python_version = "3.7"
