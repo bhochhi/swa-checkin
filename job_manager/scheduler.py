@@ -1,17 +1,21 @@
 import logging
 from datetime import datetime, timedelta
-
+import os
 from apscheduler.schedulers.background import BackgroundScheduler
 
 import crawler
 
 schedr = BackgroundScheduler()
 
+MONGO_URL = os.environ.get('MONGO_URL')
+if not MONGO_URL:
+    MONGO_URL = "mongodb://localhost:27017/swa-checkins"
+
 
 def start_scheduler():
     logging.info("Starting Scheduler")  # TODO: why logging not working?
     print("------****------Starting Scheduler------****------")
-    schedr.add_jobstore('mongodb', collection='active_jobs', database='swacheckin', hostname='')
+    schedr.add_jobstore('mongodb', collection='active_jobs', database='swacheckins', host=MONGO_URL)
     try:
         schedr.start()
     except (KeyboardInterrupt, SystemExit):
