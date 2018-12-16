@@ -11,7 +11,7 @@ schedr = BackgroundScheduler()
 def start_scheduler():
     logging.info("Starting Scheduler")  # TODO: why logging not working?
     print("------****------Starting Scheduler------****------")
-    schedr.add_jobstore('mongodb', collection='active_jobs', database='swacheckin')
+    schedr.add_jobstore('mongodb', collection='active_jobs', database='swacheckin', hostname='')
     try:
         schedr.start()
     except (KeyboardInterrupt, SystemExit):
