@@ -15,7 +15,7 @@ if not MONGO_URL:
 def start_scheduler():
     logging.info("Starting Scheduler")  # TODO: why logging not working?
     print("------****------Starting Scheduler------****------")
-    schedr.add_jobstore('mongodb', collection='active_jobs', database='swacheckins', host=MONGO_URL)
+    schedr.add_jobstore('mongodb', collection='active_jobs', database='swa-checkins', host=MONGO_URL)
     try:
         schedr.start()
     except (KeyboardInterrupt, SystemExit):
