@@ -46,3 +46,8 @@ if not scheduler.is_scheduler_running():
 
 if __name__ == "__main__":
     app.run(debug=False, use_reloader=False)
+
+
+# //TODO: Email the client
+# TODO: buildpack for webdriver in heroku
+# TODO: Timezone consideration.

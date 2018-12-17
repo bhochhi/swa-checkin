@@ -1,6 +1,11 @@
 
 $(document).ready(function() {
-   $('#scheduleDate').datetimepicker();
+   $('#scheduleDate').datetimepicker({
+    calendarWeeks: true,
+    format: "YYYY-MM-DD HH:mm",
+    timeZone: 'America/Chicago'
+
+  });
 });
 
 
