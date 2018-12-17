@@ -9,7 +9,7 @@ logging.getLogger().setLevel(logging.INFO)
 app = Flask(__name__)
 logging.info("Initialing application")
 
-MONGO_URL = os.environ.get('MONGO_URL', default="mongodb://localhost:27017/swa-checkins")
+MONGO_URL = os.environ.get('MONGO_URL') #, default="mongodb://localhost:27017/swa-checkins")
 logging.info("MONGO URL: %s", MONGO_URL)
 
 logging.info('Testing config vars==> %s', os.environ.get('TEST_KEY'))
