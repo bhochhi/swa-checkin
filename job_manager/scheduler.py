@@ -7,7 +7,7 @@ import crawler
 
 schedr = BackgroundScheduler()
 
-MONGO_URL = os.environ.get('MONGO_URL', default="mongodb://localhost:27017/swa-checkins")
+MONGO_URL = os.environ.get('MONGODB_URL', default="mongodb://localhost:27017/swa-checkins")
 
 def is_scheduler_running():
     schedr.running
