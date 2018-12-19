@@ -2,6 +2,8 @@ from flask import Flask, render_template, request
 from job_manager import scheduler, checkin_store as dm
 import logging
 import os
+from selenium import webdriver
+
 
 # TODO: make is configurable
 logging.getLogger().setLevel(logging.INFO)
@@ -46,7 +48,6 @@ if not scheduler.is_scheduler_running():
 
 if __name__ == "__main__":
     app.run(debug=False, use_reloader=False)
-
 
 # //TODO: Email the client
 # TODO: buildpack for webdriver in heroku

@@ -1,21 +1,28 @@
 from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException
-import sys
+import os
 import logging
+
+from os import listdir
+from os.path import isfile, join
+
 
 from selenium.webdriver.chrome.options import Options
 
 
 def crawl_checkin_page(confirmationNumber, passengerFirstName, passengerLastName, phoneNumber):
     try:
+
+        logging.info("======================>all files list: %s", os.listdir('./crawler'))
         logging.info('Time to crawl swa checkin for %s:%s for confirmation:%s', passengerFirstName,
                      passengerLastName, confirmationNumber)
         chrome_options = Options()
         chrome_options.add_argument("--headless")
         chrome_options.add_argument("--window-size=1920x1080")
-        driver = webdriver.Chrome(chrome_options=chrome_options)
+        logging.info("*************all files list: %s", os.listdir())
+        # driver = webdriver.Chrome(chrome_options=chrome_options)
         # driver = webdriver.Chrome()
-        # driver = webdriver.Chrome(r'./chromedriver', chrome_options=chrome_options)
+        driver = webdriver.Chrome('./crawler/chromedriver-unix', chrome_options=chrome_options)
         driver.get("https://www.southwest.com/air/check-in/")
         driver.implicitly_wait(2)
         elem = driver.find_element_by_id("confirmationNumber")
