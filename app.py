@@ -48,6 +48,12 @@ if __name__ == "__main__":
     app.run(debug=False, use_reloader=False)
 
 
+if __name__ != "__main__":
+    gunicorn_logger = logging.getLogger('gunicorn.error')
+    app.logger.handlers = gunicorn_logger.handlers
+    app.logger.setLevel(gunicorn_logger.level)
+
+
 # //TODO: Email the client
 # TODO: buildpack for webdriver in heroku
 # TODO: Timezone consideration.
