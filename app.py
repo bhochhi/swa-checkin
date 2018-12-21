@@ -12,7 +12,6 @@ logging.info("Initialing application")
 MONGO_URL = os.environ.get('MONGODB_URL',  default="mongodb://localhost:27017/swa-checkins")
 logging.info("MONGO URL: %s", MONGO_URL)
 
-logging.info('Testing config vars==> %s', os.environ.get('TEST_KEY'))
 
 
 # TODO: export to routes file
@@ -37,15 +36,15 @@ def checkin():
 
     if dm.create_new_entry(request.form):
         scheduler.schedule_job(request.form)
-        return '<span>You are all set!! Scheduled to checkin at ' + str(_date) + '</span>'
-    return '<span>Something went wrong</span>'
+        return 'Your request has been queued to run at' + str(_date) + '</span>'
+    return 'Something went wrong.'
 
 
 if not scheduler.is_scheduler_running():
     scheduler.start_scheduler()
 
 if __name__ == "__main__":
-    app.run(debug=False, use_reloader=False)
+    app.run(debug=True)
 
 
 # //TODO: Email the client

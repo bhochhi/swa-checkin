@@ -23,7 +23,8 @@
 <body>
 
 <div class="container wrapper">
-    <form class="form-checkin" name="form-checkin" action="{{ url_for('checkin') }}" method="post">
+    <form class="form-checkin" id="form-checkin" name="form-checkin" action="{{ url_for('checkin') }}" method="post">
+    <!--<form class="form-checkin" id="form-checkin" name="form-checkin">-->
         <img class="mb-4" src="../static/images/sw.svg" alt="">
 
         <h2 class="h2 mb-2 font-weight-normal">Check-in Scheduler</h2>
@@ -31,29 +32,28 @@
         <em class="note">use at your own risk</em>
         <h3 class="h3 mb-3 font-weight-normal">Enter passenger information.</h3>
         <label for="confirmationNumber" class="sr-only">Confirmation # *</label>
-        <input type="text" id="confirmationNumber" name="confirmationNumber" class="form-control"
+        <input type="text" id="confirmationNumber" name="confirmationNumber" class="form-control" VALUE="L7XNQ9"
                placeholder="Confirmation #" required autofocus>
 
         <label for="firstName" class="sr-only">FIRST NAME *</label>
-        <input type="text" id="firstName" name="firstName" class="form-control" placeholder="First name" required
+        <input type="text" id="firstName" name="firstName" class="form-control" placeholder="First name" VALUE="RUPESH" required
                autofocus>
 
         <label for="lastName" class="sr-only">LAST NAME *</label>
-        <input type="text" id="lastName" name="lastName" class="form-control" placeholder="Last name" required
+        <input type="text" id="lastName" name="lastName" class="form-control" placeholder="Last name" VALUE="BHOCHHIBHOYA" required
                autofocus>
 
         <label for="email" class="sr-only">Email address</label>
-        <input type="email" id="email" name="email" class="form-control" placeholder="Email address">
+        <input type="email" id="email" name="email" class="form-control" value="bhochhi@aol.com" placeholder="Email address">
 
         <label for="phoneNumber" class="sr-only">Phone Number</label>
-            <input type="tel" id="phoneNumber" name="phoneNumber" class="form-control"
+            <input type="tel" id="phoneNumber" name="phoneNumber" class="form-control" value="4053121309"
                placeholder="Cellphone where boarding pass will be texted">
 
         <div class="row">
-            <div class='col-sm-12' data-provide
-            >
+            <div class='col-sm-12' >
                 <label for="scheduleDate" class="sr-only">schedule check-in datetime: </label>
-                <input type='text' class="form-control" id='scheduleDate' name='scheduleDate' placeholder="schedule check-in datetime" required/>
+                <input type='text' class="form-control" id='scheduleDate' name='scheduleDate' data-provide="datetimepicker" placeholder="schedule check-in datetime" required/>
             </div>
         </div>
 
@@ -61,9 +61,10 @@
     </form>
     <div class="push"></div>
 </div>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"

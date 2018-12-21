@@ -26,10 +26,10 @@ def start_scheduler():
 
 def schedule_job(entry):
     logging.info("Creating job, stored into db and schedule to trigger by date.{0}".format(entry))
-    # alarm_time = datetime.now() + timedelta(minutes=1)  # Testing
-    date_time_requested = datetime.datetime.strptime(entry['scheduleDate'], '%m/%d/%Y %H:%M ')
+    alarm_time = datetime.now() + timedelta(seconds=10)  # Testing
+    # date_time_requested = datetime.datetime.strptime(entry['scheduleDate'], '%m/%d/%Y %H:%M ')
 
-    alarm_time = date_time_requested + timedelta(seconds=10)  # Testing
+    # alarm_time = date_time_requested + timedelta(seconds=10)  # Testing
 
     logging.info("Your job will run the job at: {0}".format(alarm_time))
     schedr.add_job(crawler.crawl_checkin_page, 'date', run_date=alarm_time,
