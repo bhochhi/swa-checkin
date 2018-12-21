@@ -2,21 +2,8 @@
 $(document).ready(function() {
    $('#scheduleDate').datetimepicker({
     sideBySide:true,
-    format:'YYYY-MM-DDTHH:mm:ssZZ'
+    format:'MM/DD/YYYY HH:mm:ss'
    });
-//    var input = $(this).find("input[name=scheduleDate]");
-//    var picker = $('#scheduleDate').data('datetimepicker');
-//    input.val(picker.getLocalDate());
-
-//    $("form-checkin").submit(function(){
-//    // Let's find the input to check
-//    var input = $(this).find("input[name=scheduleDate]");
-//    if (input.val()) {
-//            var picker = $('#scheduleDate').data('datetimepicker');
-//          alert(input.val());
-//            input.val(picker.getLocalDate());
-//           }
-//    });
 
 
  $("form").submit(function(event){
@@ -24,9 +11,9 @@ $(document).ready(function() {
      $.ajax({
         type: "POST",
         url: $("form").attr('action'),
-        data: toJson($('form.form-checkin').serialize()),
+        data: formattedFormData($('form.form-checkin').serialize()),
         success: function(msg){
-             alert(msg);
+             alert(unescape(msg));
         },
         error: function(){
             alert("failure");
@@ -37,6 +24,12 @@ $(document).ready(function() {
 });
 
 
+function formattedFormData(data){
+    var json = toJson(data);
+    json['scheduledDate'] = getUTCDate(json['scheduleDate'])
+    return json;
+}
+
 
 
 function toJson(formArray) {//serialize data function
@@ -44,14 +37,13 @@ function toJson(formArray) {//serialize data function
         var obj = value.split('=');
         json[obj[0]] = obj[1];
         return json;
-
     }, {});
 
     return json;
 }
 
 function getUTCDate(datetime) {
-    return moment(datetime).utc().format('YYYY-MM-DDTHH:mm:ssZZ');
+    return moment(unescape(datetime)).format('YYYY-MM-DDTHH:mm:ssZZ');
 }
 
 

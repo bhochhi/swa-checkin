@@ -36,7 +36,7 @@ def checkin():
 
     if dm.create_new_entry(request.form):
         scheduler.schedule_job(request.form)
-        return 'Your request has been queued to run at' + str(_date) + '</span>'
+        return 'Your request has been queued to run at {0}'.format(_date)
     return 'Something went wrong.'
 
 
