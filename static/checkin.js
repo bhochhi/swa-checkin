@@ -14,9 +14,12 @@ $(document).ready(function() {
         data: formattedFormData($('form.form-checkin').serialize()),
         success: function(msg){
              alert(unescape(msg));
+             $("form.form-checkin")[0].reset()
+
         },
-        error: function(){
-            alert("failure");
+        error: function(err){
+            alert("failure!! ",err);
+           $("form.form-checkin")[0].reset()
         }
      });
      return false;
@@ -26,19 +29,19 @@ $(document).ready(function() {
 
 function formattedFormData(data){
     var json = toJson(data);
-    json['scheduledDate'] = getUTCDate(json['scheduleDate'])
+    json['scheduleDate'] = getUTCDate(json['scheduleDate'])
     return json;
 }
 
 
 
-function toJson(formArray) {//serialize data function
+function toJson(formArray) {
     var json = formArray.split('&').reduce((json, value, idx) => {
         var obj = value.split('=');
         json[obj[0]] = obj[1];
         return json;
     }, {});
-
+    console.log('returning....',json)
     return json;
 }
 

@@ -1,8 +1,9 @@
 import logging
 from datetime import datetime, timedelta
+# import datetime as dt
 import os
 from apscheduler.schedulers.background import BackgroundScheduler
-
+import html
 import crawler
 
 schedr = BackgroundScheduler()
@@ -26,7 +27,8 @@ def start_scheduler():
 
 def schedule_job(entry):
     logging.info("Creating job, stored into db and schedule to trigger by date.{0}".format(entry))
-    alarm_time = datetime.now() + timedelta(seconds=10)  # Testing
+    alarm_time = datetime.strptime(entry['scheduleDate'], "%Y-%m-%dT%H:%M:%S%z") + timedelta(seconds=10)
+    # alarm_time = datetime.parse(entry['scheduleDate']) + timedelta(seconds=10)  # Testing
     # date_time_requested = datetime.datetime.strptime(entry['scheduleDate'], '%m/%d/%Y %H:%M ')
 
     # alarm_time = date_time_requested + timedelta(seconds=10)  # Testing
