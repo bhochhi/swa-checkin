@@ -1,0 +1,537 @@
+URI: https://www.southwest.com/api/air-checkin/v1/air-checkin/page/air/check-in/review
+METHOD: POST
+HEADERS: {"Content-Type":"application/json",
+"x-api-key":"l7xx944d175ea25f4b9c903a583ea82a1c4c"}
+BODY: {"confirmationNumber":"VALIDCONFIRMATION","passengerFirstName":"first-name","passengerLastName":"last-name","application":"air-check-in","site":"southwest"}
+RESPONSE:
+-- SUCCESS:
+{
+    "data": {
+        "searchResults": {
+            "reservation": {
+                "confirmationNumber": "VALIDCONFIRMATION",
+                "airportCheckInRequired": false,
+                "electronicSystemTravelAuthorizationRequired": false,
+                "international": false,
+                "companionPassenger": false,
+                "seniorPassenger": false,
+                "eligibleForDrinkCoupon": false,
+                "upgradeToBusinessSelect": true,
+                "groupReservation": false,
+                "tripType": "roundtrip",
+                "travelers": [
+                    {
+                        "travelerIdentity": "20056B1D00011A26",
+                        "infantTravelerIdentifier": null,
+                        "passengerType": "A",
+                        "additionalPassengerType": null,
+                        "extraSeat": false,
+                        "firstName": "first-name",
+                        "middleName": "Laxmi",
+                        "lastName": "last-name",
+                        "suffixName": null,
+                        "givenName": "first-name Laxmi",
+                        "surname": "last-name",
+                        "dateOfBirth": null,
+                        "gender": null,
+                        "accountNumber": null,
+                        "tier": null,
+                        "boardingBounds": [
+                            {
+                                "eligibleForSelfServiceCheckIn": true,
+                                "boardingSegments": [
+                                    {
+                                        "travelerSegmentIdentifier": "2002DB1D0007C0A0",
+                                        "flightIdentifier": "WN155DALATL20181224",
+                                        "boardingGroup": "B",
+                                        "boardingGroupPosition": "10",
+                                        "tsaPreCheck": false,
+                                        "eligibleForDrinkCoupon": false,
+                                        "disabilityAssistance": false,
+                                        "customerAcceptanceStatus": "ACCEPTED",
+                                        "bookingDetails": {
+                                            "bookingClass": "G",
+                                            "pointsBooking": false,
+                                            "fareFamily": "WGA",
+                                            "fareBasis": null
+                                        },
+                                        "specialServiceRequests": [],
+                                        "expectedDocumentType": "BOARDING_PASS",
+                                        "printed": true,
+                                        "acceptanceStatus": "OPEN",
+                                        "generalStatus": "OPEN"
+                                    }
+                                ],
+                                "index": 1,
+                                "selfCheckInDeniedReason": null,
+                                "earlyBirdPurchased": false,
+                                "airportCheckInRequired": false,
+                                "electronicSystemTravelAuthorizationRequired": false,
+                                "requiredInformationPending": false
+                            }
+                        ],
+                        "emergencyContact": null,
+                        "nationality": null,
+                        "youngTraveler": false,
+                        "passportInformation": {
+                            "docNumber": null,
+                            "expirationDate": null,
+                            "issueCountry": null,
+                            "type": null
+                        },
+                        "visa": null,
+                        "destinationAddress": null,
+                        "greenCard": null,
+                        "residenceAddressCountry": null,
+                        "lapChild": false,
+                        "missingDocuments": [],
+                        "apisComplete": true,
+                        "residenceAddress": null
+                    }
+                ],
+                "bounds": [
+                    {
+                        "fare": "WGA",
+                        "international": false,
+                        "segments": [
+                            {
+                                "flightIdentifier": "WN155DALATL20181224",
+                                "originationAirportCode": "DAL",
+                                "destinationAirportCode": "ATL",
+                                "departureDate": "2018-12-24T16:20-06:00",
+                                "flightLegs": [
+                                    {
+                                        "operatingFlightNumber": "155",
+                                        "originationAirportCode": "DAL",
+                                        "destinationAirportCode": "ATL",
+                                        "departureDateTime": "2018-12-24T16:20-06:00",
+                                        "arrivalDateTime": "2018-12-24T19:20-05:00",
+                                        "changePlanes": false,
+                                        "nextDay": false,
+                                        "wifi": false,
+                                        "totalDuration": 120,
+                                        "stopDuration": 0
+                                    }
+                                ]
+                            }
+                        ],
+                        "type": "departing"
+                    }
+                ],
+                "bookingSource": null,
+                "reprint": true,
+                "multipleTravelersError": false,
+                "acceptedTravelers": true,
+                "travelAuthorizationCheckNotPerformed": false
+            },
+            "token": "ee..eGXjhLXwThShYorNY6EcsA.0tAlCPS5eK0ypundcM4zt37xPDDbPl9B8xfpiD5SiBWs6VgbJFAms6A842ZoEG_giHeZVOohFI9AwuXDBF3ndhj-eFXJ7XYIw37o58_F3umTP_DVv6YqJyJIrgqklg713cpqdQwnh7N3juL_6gbh9knnN5ijGCkQlwKvLrP7nyTQgjGwZIqzG1TURJHV9q_dlj-eZKs43Ez18z8RJHDsW8cAkt0cXeUbFtCTZV07rb44uayDxVnqt_izrErpKTor_QtETi4bryVOUuP0l7HARRNYxio4OsdQFlkd7WSRDTjIoJ5EK844imBM5Uk_hkOAarWXfJI6g54mttyiKvi2sNiGUBNZjgDyFKpy1kTdSKyCLY0R3xVPPfkeZp-lw3eWvrzEd2aeGMrBXHGfQ2G9JCtbaaL4EKU5MA9O0_DUW8Vqn2YQNOcwlApjjUP93uCaSdPyHx5G72nmLwSiKRtQSRIaq-uxx5uEzL9YlTGXf_DqWP-ZVRuahscxTR9VHDdLOADkheLc0nc69Qb5Rom2Araon7LB3-RoCvvhuXLo-lHXlLNfa3bu5Yul3MtBdGkQJ_O8ikVxVB36mcHqsxWWmsawMYQJjHjq8h5f5-dHR_RkHJQE1lZxf0HjEIq0EjHDZpa24aXKOrb8LSQ7qOYaz6RdGG9yX1WfiVjBtYOiA_gBeug1a91lpl7h6LvZtDWuSeAPRT7jRkmp0etBlcnaVD6-IVhdCN85RyHCuGrkXVX8a0hHw0hh2ll-KqgcjDimKGEVYphSUJf0y366cgzW5Y7DCTleecRhcyV0v_oS7Ww5IcNXx43aSSHDbL-snOuSAADmocHP4B5KkdBI1zruWm0i3dDjHA8zY3SSdNyRAF6Z53-ApsPe2Hg82Ye7UC_lhrLRviBoc_0c5fhsesHNOBQhRENlJkYQKX1Lyy_IGh6PCeJYJISAHR4xvnbLrYBShi3RM3lJjfEu_ckSuUskAUj_otiEyzbqAmPJFQfbH84L_nQPBT4YpB_P1T4zB_HX6lQJeIXUZJbI7tAz55Nw5oUf0X9abqOPjgMgxU7dgVEP_FqXFuTss76bmDB3Qi6cxd1EiTqYoQCSmNjSXKg-yaey61AS38G63kIUSctDK2uo0gy-vxRtwN7tRhGqriW-xeh9BdSmo41vAaNEaaOt1A9WwOrp7OUWbNP-0jnLILrxcMPgE9VzqCp8PngHH0g0pCRo5_25R7CF-6ZiNAAXdedD7p1B05yL8PPPuWfbFSKocC_VWZrn1xJTGcRjaKc-zFOASlK9mfOdEdv6vvKE8yU4p0YWh2utxRcTp3yQ7_mI0UyM_NN0SJppvKZb-zJYfurS7z7V4uOMb-eWTqn4ElDIz5bp1DBDfop826HwCBQKBxIMVSSnOkJK1JHAOsobeQcAo1dVWlPXV5_kWdUx16-79-wNwj4l4oEFucKHbCAqANde4dRpijzuWE4w7_CvuvATXR64IoUcMlf6WFyqg997QHnjkGNiWLcbb0kzOi292UvpPj4ZL1JAJnWGHnStSytANKFASHS2MYkZH2M3DI2gMQ5ewLYCgP8GNG3d-rud-OIH2YrdiiuOnQUyBboyMqOWh20N3_RMqghZVCO0QuTrYoq0SyV5xT1AKsDAEqET_cGAx-m7UDqgVew-A186_a0LcMORir-Z09Ys8NiSpSMcamxbzIFbX09BbKpFMNF1YNDf9qJgj9S0PWkHgftvO54_Ja-hU5wqEc6zSY_WeCV1SUELU7yeAT1LkHqIlX3EHljm76-z-96NbFdfGzhykA-J7oKa3Fo5Jw_d0XT2eBuoUxm7w1hkIpgw36rXRuZYP9XCZFXxhozkTeLc9pabLL5_mTQeAsm7RAatUzsbLLRVCZy9znra7PhK25ZbQvaSOa_3L6yu4WAlKndkn5aRqzs8FyPAIP4bJtri-J73BJHisNSJTiVKZcsRnqggxlimyOBlk51ZZ4tLjv5dy-ZVAnLfU8ICNCLyvvF0_o-yUp8w4F2Z2MHXMs1mqWwG7RNeTeyM_K1CoH3_EsoOUlXa61DDwt_nRfud-0aTixgU3a5osPpEWf1S0FPWP-90gUjpRWZm3MpjLZ4JlKIhfGfF_izjp2kZIXKiZF7j5YEeoNLKwgXLatzGmZrji99HpnsWLuPbQki5vMA537WU7PL4twUxSIh7-2x9xwY33WwtnB9OoSufRynVRO2sFSE2W-6ixIGFKa3ALo825Mtgx5VuxeBpWnZz8A0J452jUZ034h1-sjtnFq0MRLDxj3B9MwNtn5fBIYll_GLHsosi0jO2osXulM2I7UJj6L1-kVGj3bNDq8wJmdHeUqy90bmWCIgYYIFpydv4_KETxg4dVJpMjMzE2mdX9djzosjiqAZbnPPN9_pJHZvnyYX_PUYhcXO_rPU5jsI4MMhGdHAKRVw7lNlO9gVlZP6t5danuUGmI9HPEN5_yKE8WWsPlEf_e1IHeFr36naCPoiS2doF5W9XNJae_wU6kShH99l1wPmJn2O1mIxPNtHT0fymhmiJXvHiTu98EeBer_pW0rMncFylG3ABEGl0OYfcMrP86L8hDOP3oo-SbrY7aUNZUfXlzruW53IKmWzPGeEL8sztRfY39VYqhXkUxHG9tdIfl1nWkLHgIsaG7G1KY1lIMyUnG51-wZVA0E2yHNAz1wpekpn4FXCKtEN-Kb5J2ieaiAArajCs1Mv80_TbMYXdCKkI8REISywW3_n1mOnrjurtq2JBbkWC6fe1eRiV43zvtDTRcJQmerglfMLSny1LmYl9F6P1sZrdGTyfrS8v4GVzgtLkOHQpiZdc4viwRsjUsqxKQeRhQ8T4tY_VwhQnCmA92Xwl9cJXgIR2GnTjK5XlTzHByZCcRRnM9mnsurk92I26Gikaavn3m1LKG6WLuwFw3CVM_auCFeJaO1Dcs8STJ6QGdahvKndvEofALUe-6NZ0wzywg-CjofmXcnrsE9JdVjTbZxVZncprMlosnI54sw5yvkJldYphxPDszYghGpdK9zC4SBgAKZA8K2w_VpnaxDEqD_UanOeMp_4897pMbxNES98gzBS_idwrim-CcI__sgTIBZIN17ZF69ny-XmpUObapP60C2HyT7We508ZzBk4KPYnCMO9UZzdlpE0HaiGQGYNhPKo7f7QUgxQn6pf-f8nczydeOECmUtGvE79Dj10zkw3vJnZAOLt5zg_EQTXlLr1QI0p603gD5DPtSg7iWaBp0MHjnVSL3aROA1-x534wSD1ASRbNrv1IsjE3y0lg4GQfTVeKFNPCa025QxgpMOtFz-4AhW_1owM7qMMqQzIXSJLR9QjVytSk3sOfbLzanAwDtVmlfUH4wdFXE2PvBEs5RG4qyoo0Zn0SWi3yc-4i61aNUc7RBv2HdvdpobI5ajbzFipsbqkY9Ul5Z64OxFgnQpLoRCMGS_itafcEVuJSPg1K2mJuDGBejJrq4viymSVFkLwUfIs7w2DCLSr_Ul7SNDQw7vWetZ15xixWx6UgCKVVBuQ7v_ql5Dgqck2Lao5T7AypW6ojsPaqJJ2uhPICMnBlPJ41gRoUMfcGA_hcpbD2BOYWlFlFAWxJKP3Ic9NMQVFcIAGNz2hlzB-zoFsvew7hK8r953398tt7BwCGn3RZYEpVtxT0b_W7MpcQW0ACCZWP79ImPlpF0C2_6pSk8iRRh6acD8OoWn_yI87-edbioiGkU8cvZimoVaUV7H67gyRCZK869hHtgYNzEORyZFGCKEvzV-tBT6oUIz7HsBldLlXXQBoBG4QqPP0xwvoItco4u3HFT88rtpAgFwrtL08vfSggYeDbSsrhs4lInRy_BIhn_yeGWHtCd0yMhLt7krZdapAWvdiqvWjIRIIHJxeP75Sv4Qof2-KuBAVma9iNCFhUF1SfbmvbpdsQt2MkNguofLTkL9kPJVcTtyL051F984fKxuMS1sL_bCDe38iSY0jfXBcwiQSvhCH495S7SELAPx-5yA3JlDL9d0SIWyoZbBlkvofNnhPHYsuYx065lYt2aONy7rspPF0GZcSpu6NLWY-mxqlucnyKHytiWSDRI_6meezXcrCml-CqnzfOUbZy294fiGp5eo_zVP_9U8rG4YQUhIi2ryEuLcAUeOf23I2B6Y8QeSVhB4FdMlhUSJNVMI6FR7bS9O-qF8foQgW0hWZixo5Va7cZVYD0rcVOaQwkvzmWGuiB-d6v1BnGIQnRLG8yu7FCxP4D7UyVu2SBfYk_y_GBJzvGZiI-bDk0lhm23MOotpzi8Y8LvusvQcxIJr__oIhKxd5C-zlbWnkeeUASk3XF4E8O6WtatC4zhuVVc0otLf3RXtgyDO-7yPzigrMeMqECJGUtA.K8PDuwayPv9he-3xLed-ag",
+            "eligibleForMobileBoardingPass": true
+        }
+    },
+    "success": true,
+    "notifications": null,
+    "uiMetadata": {
+        "proxyLogout": true,
+        "chapiVersion": "1.14.0",
+        "maintenance": false,
+        "group-checkin": true
+    }
+}
+
+OR
+
+{
+    "data": {
+        "searchResults": {
+            "reservation": {
+                "confirmationNumber": "VALIDCONFIRMATION",
+                "airportCheckInRequired": false,
+                "electronicSystemTravelAuthorizationRequired": false,
+                "international": false,
+                "companionPassenger": false,
+                "seniorPassenger": false,
+                "eligibleForDrinkCoupon": false,
+                "upgradeToBusinessSelect": true,
+                "groupReservation": false,
+                "tripType": "roundtrip",
+                "travelers": [
+                    {
+                        "travelerIdentity": "2005CB7F0004BA0C",
+                        "infantTravelerIdentifier": null,
+                        "passengerType": "C",
+                        "additionalPassengerType": null,
+                        "extraSeat": false,
+                        "firstName": "Aaryan",
+                        "middleName": "Kaji",
+                        "lastName": "last-name",
+                        "suffixName": null,
+                        "givenName": "Aaryan Kaji",
+                        "surname": "last-name",
+                        "dateOfBirth": null,
+                        "gender": null,
+                        "accountNumber": null,
+                        "tier": null,
+                        "boardingBounds": [
+                            {
+                                "eligibleForSelfServiceCheckIn": true,
+                                "boardingSegments": [
+                                    {
+                                        "travelerSegmentIdentifier": "2002CB7F002B48BD",
+                                        "flightIdentifier": "WN155DALATL20181224",
+                                        "boardingGroup": "B",
+                                        "boardingGroupPosition": "06",
+                                        "tsaPreCheck": false,
+                                        "eligibleForDrinkCoupon": false,
+                                        "disabilityAssistance": false,
+                                        "customerAcceptanceStatus": "ACCEPTED",
+                                        "bookingDetails": {
+                                            "bookingClass": "G",
+                                            "pointsBooking": false,
+                                            "fareFamily": "WGA",
+                                            "fareBasis": null
+                                        },
+                                        "specialServiceRequests": [],
+                                        "expectedDocumentType": "BOARDING_PASS",
+                                        "printed": true,
+                                        "acceptanceStatus": "OPEN",
+                                        "generalStatus": "OPEN"
+                                    }
+                                ],
+                                "index": 1,
+                                "selfCheckInDeniedReason": null,
+                                "earlyBirdPurchased": false,
+                                "airportCheckInRequired": false,
+                                "electronicSystemTravelAuthorizationRequired": false,
+                                "requiredInformationPending": false
+                            }
+                        ],
+                        "emergencyContact": null,
+                        "nationality": "US",
+                        "youngTraveler": false,
+                        "passportInformation": {
+                            "docNumber": null,
+                            "expirationDate": null,
+                            "issueCountry": "US",
+                            "type": null
+                        },
+                        "visa": null,
+                        "destinationAddress": null,
+                        "greenCard": null,
+                        "residenceAddressCountry": null,
+                        "lapChild": false,
+                        "missingDocuments": [],
+                        "apisComplete": true,
+                        "residenceAddress": null
+                    },
+                    {
+                        "travelerIdentity": "2005CB7F0004BA0D",
+                        "infantTravelerIdentifier": null,
+                        "passengerType": "A",
+                        "additionalPassengerType": null,
+                        "extraSeat": false,
+                        "firstName": "first-name",
+                        "middleName": null,
+                        "lastName": "last-name",
+                        "suffixName": null,
+                        "givenName": "first-name",
+                        "surname": "last-name",
+                        "dateOfBirth": null,
+                        "gender": null,
+                        "accountNumber": "444444",
+                        "tier": "",
+                        "boardingBounds": [
+                            {
+                                "eligibleForSelfServiceCheckIn": true,
+                                "boardingSegments": [
+                                    {
+                                        "travelerSegmentIdentifier": "2002CB7F002B48BE",
+                                        "flightIdentifier": "WN155DALATL20181224",
+                                        "boardingGroup": "B",
+                                        "boardingGroupPosition": "07",
+                                        "tsaPreCheck": false,
+                                        "eligibleForDrinkCoupon": false,
+                                        "disabilityAssistance": false,
+                                        "customerAcceptanceStatus": "ACCEPTED",
+                                        "bookingDetails": {
+                                            "bookingClass": "G",
+                                            "pointsBooking": false,
+                                            "fareFamily": "WGA",
+                                            "fareBasis": null
+                                        },
+                                        "specialServiceRequests": [
+                                            "RR"
+                                        ],
+                                        "expectedDocumentType": "BOARDING_PASS",
+                                        "printed": true,
+                                        "acceptanceStatus": "OPEN",
+                                        "generalStatus": "OPEN"
+                                    }
+                                ],
+                                "index": 1,
+                                "selfCheckInDeniedReason": null,
+                                "earlyBirdPurchased": false,
+                                "airportCheckInRequired": false,
+                                "electronicSystemTravelAuthorizationRequired": false,
+                                "requiredInformationPending": false
+                            }
+                        ],
+                        "emergencyContact": null,
+                        "nationality": null,
+                        "youngTraveler": false,
+                        "passportInformation": {
+                            "docNumber": null,
+                            "expirationDate": null,
+                            "issueCountry": "US",
+                            "type": null
+                        },
+                        "visa": null,
+                        "destinationAddress": null,
+                        "greenCard": null,
+                        "residenceAddressCountry": null,
+                        "lapChild": false,
+                        "missingDocuments": [],
+                        "apisComplete": true,
+                        "residenceAddress": null
+                    },
+                    {
+                        "travelerIdentity": "2005CB7F0004BA0E",
+                        "infantTravelerIdentifier": null,
+                        "passengerType": "C",
+                        "additionalPassengerType": null,
+                        "extraSeat": false,
+                        "firstName": "ddd",
+                        "middleName": "ddfg",
+                        "lastName": "last-name",
+                        "suffixName": null,
+                        "givenName": "Shrewewiyan ewewe",
+                        "surname": "last-name",
+                        "dateOfBirth": null,
+                        "gender": null,
+                        "accountNumber": null,
+                        "tier": null,
+                        "boardingBounds": [
+                            {
+                                "eligibleForSelfServiceCheckIn": true,
+                                "boardingSegments": [
+                                    {
+                                        "travelerSegmentIdentifier": "2002CB7F002B48BF",
+                                        "flightIdentifier": "WN155DALATL20181224",
+                                        "boardingGroup": "B",
+                                        "boardingGroupPosition": "08",
+                                        "tsaPreCheck": false,
+                                        "eligibleForDrinkCoupon": false,
+                                        "disabilityAssistance": false,
+                                        "customerAcceptanceStatus": "ACCEPTED",
+                                        "bookingDetails": {
+                                            "bookingClass": "G",
+                                            "pointsBooking": false,
+                                            "fareFamily": "WGA",
+                                            "fareBasis": null
+                                        },
+                                        "specialServiceRequests": [],
+                                        "expectedDocumentType": "BOARDING_PASS",
+                                        "printed": true,
+                                        "acceptanceStatus": "OPEN",
+                                        "generalStatus": "OPEN"
+                                    }
+                                ],
+                                "index": 1,
+                                "selfCheckInDeniedReason": null,
+                                "earlyBirdPurchased": false,
+                                "airportCheckInRequired": false,
+                                "electronicSystemTravelAuthorizationRequired": false,
+                                "requiredInformationPending": false
+                            }
+                        ],
+                        "emergencyContact": null,
+                        "nationality": "US",
+                        "youngTraveler": false,
+                        "passportInformation": {
+                            "docNumber": null,
+                            "expirationDate": null,
+                            "issueCountry": "US",
+                            "type": null
+                        },
+                        "visa": null,
+                        "destinationAddress": null,
+                        "greenCard": null,
+                        "residenceAddressCountry": null,
+                        "lapChild": false,
+                        "missingDocuments": [],
+                        "apisComplete": true,
+                        "residenceAddress": null
+                    },
+                    {
+                        "travelerIdentity": "2005CB7F0004BA0F",
+                        "infantTravelerIdentifier": null,
+                        "passengerType": "A",
+                        "additionalPassengerType": null,
+                        "extraSeat": false,
+                        "firstName": "ddsds",
+                        "middleName": null,
+                        "lastName": "Shresteweweha",
+                        "suffixName": null,
+                        "givenName": "ewewe",
+                        "surname": "dsdsdsd",
+                        "dateOfBirth": null,
+                        "gender": null,
+                        "accountNumber": null,
+                        "tier": null,
+                        "boardingBounds": [
+                            {
+                                "eligibleForSelfServiceCheckIn": true,
+                                "boardingSegments": [
+                                    {
+                                        "travelerSegmentIdentifier": "2002CB7F002B48C0",
+                                        "flightIdentifier": "WN155DALATL20181224",
+                                        "boardingGroup": "B",
+                                        "boardingGroupPosition": "09",
+                                        "tsaPreCheck": false,
+                                        "eligibleForDrinkCoupon": false,
+                                        "disabilityAssistance": false,
+                                        "customerAcceptanceStatus": "ACCEPTED",
+                                        "bookingDetails": {
+                                            "bookingClass": "G",
+                                            "pointsBooking": false,
+                                            "fareFamily": "WGA",
+                                            "fareBasis": null
+                                        },
+                                        "specialServiceRequests": [],
+                                        "expectedDocumentType": "BOARDING_PASS",
+                                        "printed": true,
+                                        "acceptanceStatus": "OPEN",
+                                        "generalStatus": "OPEN"
+                                    }
+                                ],
+                                "index": 1,
+                                "selfCheckInDeniedReason": null,
+                                "earlyBirdPurchased": false,
+                                "airportCheckInRequired": false,
+                                "electronicSystemTravelAuthorizationRequired": false,
+                                "requiredInformationPending": false
+                            }
+                        ],
+                        "emergencyContact": null,
+                        "nationality": "US",
+                        "youngTraveler": false,
+                        "passportInformation": {
+                            "docNumber": null,
+                            "expirationDate": null,
+                            "issueCountry": "US",
+                            "type": null
+                        },
+                        "visa": null,
+                        "destinationAddress": null,
+                        "greenCard": null,
+                        "residenceAddressCountry": null,
+                        "lapChild": false,
+                        "missingDocuments": [],
+                        "apisComplete": true,
+                        "residenceAddress": null
+                    }
+                ],
+                "bounds": [
+                    {
+                        "fare": "WGA",
+                        "international": false,
+                        "segments": [
+                            {
+                                "flightIdentifier": "WN155DALATL20181224",
+                                "originationAirportCode": "DAL",
+                                "destinationAirportCode": "ATL",
+                                "departureDate": "2018-12-24T16:20-06:00",
+                                "flightLegs": [
+                                    {
+                                        "operatingFlightNumber": "155",
+                                        "originationAirportCode": "DAL",
+                                        "destinationAirportCode": "ATL",
+                                        "departureDateTime": "2018-12-24T16:20-06:00",
+                                        "arrivalDateTime": "2018-12-24T19:20-05:00",
+                                        "changePlanes": false,
+                                        "nextDay": false,
+                                        "wifi": false,
+                                        "totalDuration": 120,
+                                        "stopDuration": 0
+                                    }
+                                ]
+                            }
+                        ],
+                        "type": "departing"
+                    }
+                ],
+                "bookingSource": null,
+                "reprint": true,
+                "multipleTravelersError": false,
+                "acceptedTravelers": true,
+                "travelAuthorizationCheckNotPerformed": false
+            },
+            "token": "ee..Yrl6oq0IvYROUftE6isRIw.G_f72zpbu5NkZXPivICRQ_cSgyNjmPzcrwgk8nePJbfXILxkLLoCTMspjWanE6tXMn-N8fduaFAVwnrIal-nCSqAaA78Ytzt1bF4xge43rIgemKGbmfcZoQ5vtwRnwzgxyJf22ohuESZOCtoNY5aPDD_UoERmESk-c_Jkd7EOwAXsb9mfPNuQ3BY8n2NITVkZ3MvUdHbeY3AdCdwumvsk8aAsHnIYmL0IpEuhiP1ra7R4hwWVwRiMd8wH3WREhQNMVid2C34DmCBgIJ6oBxHyw_xBuPaYIMFzMrbhRHOvXS35wl4c-LiVDIwzwN1NuHKaSekilytSiEJBuKyKIIW9rv2oarvz_oLR7WJjGMfgEt0gOCk68pICGU-bpIezwA6nKHEjFoFJT86_tCKfPLhL_1xb8Uraof3qxb1XnFqjZNwbW67aoilEi5a0KP6AzH1dKx_D5lLOHgp9WUyWs0uhPaTUKdAiT4gBoxPZsBYGmiiDvYVJi4TEXJL34F9Ut4IYEZaiH3pDx9CL3DIXzcqQHtyYP3S_C-MPIWgq72LjlBCqzxjaaoaRHw5KDyJvhZC_Ta7QlefsrbBegHU7n_csdlfSbwE9wuw1a8eJxk5x0ZFDBUA8SLYSM33B-7nYg8tXpsyjwKA2TfMBR5xPiW3X20cXZDZgepQKJGWOV8HLR6F0NFUM6OFcIKNqwgyBjx8dk-L4sLPK4ywA0_RYPIY313CHk9gL4ZQRTBzdsMPUHQBEGJVWgjsyM3aRyjIPb3JlTzJDeupZijkoo8_IFIHcerAjlMLNhQpZjFZ6Qhnbgse-7TOdaY_rZ6gYsRO6Lb9DUtWYqeG8H1Dgq98irYk3X3wSASlh_75er3e4ch7eHvpFgU47eI85wVkdsE4mfaXQ33cdfVcTtKaaue4QOczxh7ktMHUBmOR2sWHNonDj5I9HEW8nS4qUpxu_0fRrdV6J3O2_URpQsNcr-Vul28TD9K9eQynXs_YgkST0nnuJNcd1xsvitGBNAQ7C27mpnCF5XjYI2fUI4J_GhxlUj8TWVdcPfcpoX09sV1r09TYnVzM8n4jwtqEPUTpINHU7K6IQEl38SjVR2kwxn6Ktq1b8nxZjrfiiruSzKy_fXsG5EUGGlf6x4705D9oRXkzyHYNr9LN8jRBUWsRDZSQVlvziIez2FLZboVdqsI6QKRBV_q_E_YnwyIUiTA1hvf53_YcvhYame8NZot5WZS3agDlqRkGab1TenINXj6yB97fFU1EF_9lD9qb8IXPtU_mZqImiMmFtG-LZ1HwJzDzXLnAKQQwLMGqoOztg9BGMCfK87RCxmlQ-v9S3dfwhxEMdpdgK564tDKFT47An4FPoHTL6QICrpU1e0jXI4LJjfhqDSGks-8zXxETSudiWpslo537JWYM0AlOuXbR4rRfxRtbCuZ0bDaJNy-DVNZG6UYimf96zWlF6A1kV1KoxJAsC9bkoKnMWG5U_5q28iWrSaW1dvNDRsp_9lXnPcvLZ4IvBGObfjg1XaAqP0HglWKaFMsmfeqJNJKSC9ajWwgrJvSJ2DxeAR884NKCM51aCd2t2v6USwrvKjr7UcNbk2_SnlKRUM0u0HJ4C3tt2rZD7SFGMrHyixlLBlwu14V5Z9MqvjH_29vjZsYOffM-rGVdXGmSYvgIzMBCI2bgbXHBuKSML5ctpH4HCg716c_deBp7JT84k1sFQu2tb4YUJAytM0bH4X1x0B0VNfDT7OGd7ax-v05wXChwt-taeCKI9cg7VUIoova1gOcXGleQUJWOEak47cfC-wM2xu4andi52RocwwtmxvUJNHQ-0N4LJWqRCNgvDZsGDBHideWz4FWsPTv6qFVYpstsphjxUFh_JQbKvKuMzIte4bIZfOzwh5dltuYwqXE8aXCAoxorG30VqlXtX3Wj4FE_MqkVW1yvwHIjOHOQzsnXmuoL4yIs0x5hM4sq8IzSMqNClhYzeYAlbVdtOPgI5MTFBLgr2KsNNHgfapPviMs4PAvAT6sQbt5-FQlrPUI8Sly-kGlIwL98DILFmQH91Hqs0LC-r5XL9z9iJq0XTJAhUOP2W9UE3L-fmdgsUNWaJGSZ1ogppGCI66zyKrLupKpUvuNDdOmfFk_JosVX7Z1_B8Yc5aWCS7v8-6-1JBlOtZMHxJE4vYlFCjAMkT-Qc4sjqN-p0q1floDwCL5NSfCz_mcHQXlF9oJrZaZmddAQysMDbTBPrL6M1T97q9-ExwetZX6Q8egFOFSHDv-Mg_FWQPKjxS7h5txGs1guy8qXURLJFnEksz58jekJyibR3VyaPHtvr5H4gfoOr2UX2bfTS_bhLJ58QWNpVeX9VlhJh6DVAmwZ6IJW4XetBC0cgcIqsVtgUOKR4AbVbw-8egk0TRq3AEf5bHTmuZaff-C2i2_tm2vWpcvr13aQUIWQo4NPMSTT8jAQUJkOcbigeWkSWbpB8nBIidnh32fCqHJL4vMmqr6kowANh3tl7Noh4t-OjMbcnWvsKp4Zoq2XSkA6OVUgquPqB4W0Tv0jl7LGsf6ZOeW1zV-mKiHmz9st_TBT3MzIUKtp-LRN0aYqt8Jd_5-gL8jyqd_OfbjBfuIdurRrjhtzG0T4izPRxLYG2S5oS62XAaHn7wM7EmXz99Xn5lkwnve6s6Lg9FGVKtxR-OFB2bTbs78QOHtNxVgIeZMvgrwshWOrobS63Ipm1WGcdvWdm8kXGbNU1SBRO5U927o3L51M3XR_HTqQOqPTx27yVG0u6Q8Ar7GCqp0FsTp1rOvfD75oRzd47GA-QmksSuWvEPZKTVrEsGODh1NfkcBz11LwyiRjiyqjSWz7CGDXtTuenEaMNfKfwLmmGGdEiaQ1sj31VWX0GtZLNL2ngLv3cEqfBtomqsIvf1dH2FkwFzcuUK7C0HVCXVxp04BwCZlG__VJELm-klaqHmpZ_Cj_4JtSKQEYS3i75mZBlOKSLRkkCtsVWLjS6FuxmzzghNIhWPQUp8Ub6hRHYZrL8q4_vfjX2R4IhHJAwgyHbdo-W1aufeZS8DL04ABRwuEG7JRZt5z7BYWH_HPonyoxRkLCRe8BvoPKakVvSPiqAfmt8GVNr6ULvDoK8ZCbxrzX3Jw2dIHhXHxtdPAXP5gj-AJINclTLfUSjNVGA9cv9JY-kHPxqN10aijbYFHHXvtNKmW8pmK7JbEkPNNWFas5HHuvtzfkvv7VQHG6fIKxhnTSglLlgAw0X2fhpOeVwf205zsFjuuiJmHMwogSbXduPbCz6kcKUuyoaGovMeG0lFpcQnbs5xx20hwLEvlDSWtssaQ2zyyGgbn0Pzkmnx1z_4LkqestMlZn0wCJXLvZFJTUZ9NuWiXNrodeXVH3MhMBChlTBZPNSjsiayncvu-b2u1ANuywYv4SLv6fmphM19K3CfZRNPptzg1ywJmC4i8HphsfWRREoWWqD6Mchk6czzz74OnqFh2NAxaAQCPMeYeGdjOXy-mosl1JIMUkXyAZQO_fZPuuO4LuL7xhfUq6sx-fHQ50fYxfNnQY4biHcDqEgja6dXLhjXtBkP7ye9vrN8hDdHBNjmfyDn1zRmpsezSu8o-QgTEuozQ0T7wY-ajnoFjuciirjd3ZGB2zDS9EL-yq-dsGfbd0cPujqCJNPNK-pD1QpR44iUbW4snR5krEJsku8CQqria61xMy8RpkaTf6X8PLwbww7n0JqRamZmcP2lJ4iZEN7YQ3WpkgYiDi22iKC1s_hx2cznDAENCHz4dZS-RGk8EBcZHwxHCqmqgvrIJt6IyQkQ6cMo9CYxyGPWN00M65ux8SxH4nmW30SnodeAJoTZEakDAn5jicwyj2hP4x46V8xcvJrACJmLssoz1Y7Fd_EeKkI0Q0vFYCukheIrri_btxRy6JsKp5-FH52otrrsoqzPUP5F9b-wf5fMvvJLv1vP1IoHbnmNLri6pxTTtxbjCPv5S4Trd0aclPG1pqoJajCq63L6pwOJHqod1AjclTiWEDW-YJ_0cZU_1nPGcsigzMDUaJIK5CMFlJdWakkm9eM6lC9GvB1IemtiqgZn9LsVNXtUoAjL37283JJlz7m127DcG_9-eygvXvdPI_7pWhmggnqWT1Q6hOOr0CqIw9dVoHHpkXEraf9mhOdA2am5VGQ7Vg58wxnoxEmTZxQEb_Yg6Aq_KOOt9JZz0VQSUDBAVI4uhOrtFtGEx3ZEil8m1XETaBKtbuyjHqgdzDesFbOYNQpSdhgQNVD-vaJTeSWv4vzIyeD5PqfO_cMrGEAoq0vmSxa4uCBYSodDdgQKdeCVBf3yFhOeUADcb6JQFxxOITvsRT9WyjTgMhhKQB7UBuMO5QBz22a_7q_dRJ7jo65s7o1FiycvHnG99qVVe5aGPPWZmVuf36a6a6Uxp_hBbQk-zU4JJ0QwEP0YolQkXlzs-E4N_azL77dqgZy1xSaSx0HBuGqA6LclkoGqeFr5anZ73vMcqXzPZvMWlL0osvxI7q1PfeAVho1PD6OOhR9fQEQI7yQ_BjyObG0vUqimiR219gxUiX16tK2U-XPWbIHB9krq6hPm63TUrC6EHwjlu7JfXeCQyc3Vpve1xcTHYoOcopgiz78UrxrVWK9O7oiC0Us2gh7ToRYRYmbxWbxeaAGGcEQ78C39ky96P2YNrirAACVjKI1jUw8woxIHjGbuHZK3MZI6CLwBdu3FhYLXqMhfqAYvK_hsRusWaTv2vJzx3bFkSRKArgkNZdX6kavzrVdpQ3dp8L3d4smzG6IKkFCZfsGunP19nSCEyeLZCLPyydglaOt_iZ6-5ZTLeDnGwz4aZI99FA0JxzRXtM-l759kteA3wHhrvbdYHpS_pj3FYYWeZRD6kMhzSd8Ji7u3H_KO8UaMEPMf0BX000Gb8NfbK9PHaks2oIGkg_Rdn9EQTduFV8HimZYMMPBPeqUCiwnHlhFa8LZz7gIMRwj2VIVcISS-Jf5ywZtjvav_2mfimhZf0aVWz1O47yS3gy-wldGp_i-5hgo0YFB6XZDxyrrvOF82Sa6hJOk5OocrYxktzjwh-TzslITbySUMKcHQ3Pt44KJ2mb4Glwty60sF2VaI2xRwvuUsWjgOrpulGP7QZb3T_qyiietcCnBbax7pwciVRSvwZIqConBEj6z2jqntsU9iSxenPNWKCzSiLLsVu7tXEklyc73fWkXskuC8qEZLVKmNIZLSEsfKGjXlQOXwyj6rQA7t57fY_56jyRSzzHryoRdP1MZpECKFLSFsSfTPbsR5iFpOL56sOz3x_VFnbZYbx7C2G8aCgq7fYgTbim-9koPJQ2t4gp5S2rGPCtAzvX7nqA_M28UKZWXe-5LbpeAfSmOfIsfNcMOewjfN5SKOacU5650CJZBbrAE3ZNcJLHzKYybN-6UpZ4AfkjYquAeOYBfaEW679ItYp5Q4n84ovrlRAkhfCA4_8MCTmWBMOd--0F3_K_0pSnUUf7uq_2qIc4tQnXO-5Ei8v5mmLzhNqMDS8whyDWrhGErt616wbaKkncRQdEid5vY0yOaVevXs6tL83QUwc6YR-OyMHyvZSyGIyzpmduJkoZUcmC7hK6qZSRALvZw_vlwi9avEg-9KsiONN33Q2s1LbVu77ROI7F1UCYtdWcjK2FJkkzNee-V1hPoACsGn7beiDmLfe4auPK0USBRB6WhldYBDRnTa1rN5jdLY50WSEUtbjCH1niIkCySBTqeQ7w3cPMU9qO18j8X8XeG3PEKVFjrcqoFl9UmzNLpyNguQLgws5_IQwS3kDuTB_-G9YwIhA9KYxqe1MHkx5_oSEjmlOBysYx2d4KcfQMUxQe2Or7XgEDYKJsGJtjcByzMX_rXwY0g089tQSaKP1OUhddLns9ZYmvkfwZIbVrQU8SjmckiGZp5mpXIgS5kh1ts5sDPnnntrlfyXnNaGxl60eXcaGmwrrtws4SnRiskPqYr2C2hLb4lMX-ptf3rwzUKLG9uYI0P3T6YT3b7tBtUTWjhMTE7XcuyWiEtSlFmxrLZpB7UBUf47fcxWu5ACoIB3RZlhQLQLTGdOGKh6K9sFtNbv7zaA8hWL8iPv-RRsvnm7yWJIfOfj4w_-OzMlyguGD01Vyyqvj-UaG1g4A_BQdeVdEklCI0R_TOEeDMTPkT4TrgNSTQYJOG252RugTw3JS9Jc0GyEDQSyhonZi7tj8amV8KYxmAnuEszk_u7hYOrzCg7RaHfMoWEo9ltsAhdI3tX7zZhAYXPQJZDse5CV54awWEs_cikEAGh2OpSfIylJeK_fJhMrq-Tmzf4H644Q_0gqCWLv9bUVL5pt6SMWg6kNpRu8FkN30-cx9YZtZSmwWCAljTz2phnme1SY_5Plsf7c67rEgAObct-KjOLLZjys5CBmfdcPaiQr-FNAUKjAvUsGcCeXg-nsDa_i8ku7-l2loIsKdaR9sYs46-qm2k28Hpt4APrNVMDH2y6RccKTtzxeSMUIfSP6YQdzFU3QTFecMwl-LfAg--Orwx7YWIw6hCfoi-zw5FK1EceN7SCfituf-mm2o1YKTi1pzTx5aWSBZH1lamEMx-bMYFVrn3Yc9y0wYJGrPb1gqPqc8swhpshard9F7LIAj87LVaRdRl58Bol5qzTaHmv_Io2vB95XSErYfBaPHiEL2GUDdbxqtt9cBocpwkyoT6KJAbgpszONK9OJzmcY34diimii_Ujwpp-C-8ULUdjmT2DLekefCD3E-oQpxgAgXQnsxkc6a5LAP3ytFXDOakJ3W5fjK2ZBxVMG7IBL2mQz7rWD1IycFehgzZbFgYOgbvFLa81a6jTNmVnji0C5Zv8lp68llz11mDyDFjgGvESgc8bmmbmnyPtg91i8bF4S3n5NtgHrsll5JBJeepNc9S7qPfyKoysosSzzv3X6BhDkj8YswQllXF9ZaSVYfXUEU9gdmYyRKofnBTRgDclPvinN3swIbZsRr8ASWdk0vSzHojGyXC03CtgIOfWuv7ikimoW1gzR05yPILq4okF2LvGHQu-tae_bnWcgKRQ0QgIv6WriD_RhJK4QGR7JmaZiXpFzoo6JW8fdvfYYi9NFMRwk03nhAOigWZiV61Y5esUULwrjJf4Mj8p47brPfzCLlyfcUFwy7Oj2zuXdBjmcHE4s98dflI_MTKDpzQYiCfGMGNW56ZopFE_C52iBDW32a0qcTrw5hdo0JikldyfYInjeR1Tkpx_5A4gU9gl62bWmNJ2rbhpiJGJcCuZTkteD3DlLhZuIXz32AvyUq9vOaCNJBSsDSkiHn3eDiP_FQAeqaa7WoknEEtEKNii3ac5E6LNiCIFXBmsxi5b_J7yZL7IjNhS0yC_eUPfe2GQrCsReCwV7qkfBIUojjBDign7tNDZMaP8gKjhnvh_r8am2g6Ai38JDgvmkxAsbw6YNT9JXOLu5bx6QbRL8xysOLkOeEO1viJcNrTt72d-1WyKxz4Rl0UWgF_DerBtRf4inH1_99r9LVE6COmTlVteMC9cKMBmHz3ZxAG4o58zE7v66Wboy2QXhqGI2IH4oCDb8fRaNepJ4YQZk9-hUu4buCrYIXUO56d2maAab6f__q12_GlDFJJdfX_5Yk2oDU1TVGu19eZeFRNrf8IzlfTF11FP0UhhUWTppfOHULCqmOMdbIqMcRa4qirj7-x2QJWYNpMn_HQGEWWAa9OHK9F4Uf1PQ0RHCNJN1EcE7STiTrOK8pvR3Fp0nSRAY9GbgZYzA5mm7oXKTQMZ5M7mtNANc1KARJMaX5AwrbHCTxE38bjSot_r-irJ6dXIl8S5dMPjR6_jlRsxyyKJrQ8yU9UyB2bppj9V0kzUaf54D8UtILnk42ibbKJRqZvGazF3wFLdTOQLuJew8IRYAi3rMHka4u-4jfkv6Gn3m9D7rh2M59Xb0ZkdExTHQASecAJZcrvKER0zdau5LnwTkqHsCjHqcUJf4pkTVVavTkVyeKH29X4DM6zZZbhPUfYskaCBNUcUOIL0mFM0GY2HfnuqH1VJwbJDrdv44_RJJ9k2HxPhLGIaUgx_oF-P6vNSUqAuwZcaR5wE4lep9e7FzatQe8_o2YBZwdjl7BVYRaAZGi8agR_W4Pt-4oFr3g9HRfY1iHLuuCNiMlLL7lqIxLIlO-gpqa1GvHEkYfbvpkZWzZ0FRGJHeG_0-LV0N-g1bxM0HmIUqyYpO7_tAtXwAHNpZcKOnh8VVx0cicBnApbFH7Qah_ZADkj-wfFNekP2cGYoV6f7HWNcwmNwdQqIcbqNTuMWKoIv5m2dBcHf3Ja1rnGr03flKo_LBbV_fLQNZtaosIGrFPKQr2ENypaQlSG2kNPIk-pzrSWYvSxjIfwbGeZfQCSyOXyULVG4s2LDeLwNxvv8H1GjoOU_97dPG1KfomwYG0ez0zx9hvq72U0ezDXu33wfJbJQuSsNDKCk1jRa1bl2p5S8LMmQutBPnT85DAQvQ3D6JqO_9yOvd5vC57etjXi4u6M_9n2RwwJniAwYOO5yHstsTYkvqmV9A_gsDSoQCd-3_l4EXr0e6RvxuKA5iOxZuq_RneFs9BbNedQj79xPrftVFO08o9IT74N3tOSqCZ5NXPahRQb9k0bdWuYZVYgAIwuaLGRS32aPOsI1oQAyi7nuGW-XSmo4AXaCpXWbxMqtCKMHgPFvjhTfHFMNwWK-qDC9ABeDwfNzCbwWg0YdXM6X45DNz2gAoOpuHhoZ6kXA4vJb745I6F-1xgJqZiGggPotrne8EjOQFIUm8lr61vhpHbKmgmcm-lP1clmle1JoyYCK7CXSTGevJLJbmK1BpzfC5Wkc2qy2VAf-RmGef0yu-wDlKIBfYMducxSoLO_H_yzwv_RxJ0GblYiCGutfXSE6x16A2vNG9xk2H9h_ac6Wbqc9ColeA-3OcyRLeL8nnUvaJ0hKzdN2ZnZvCOUuRDorKt6nxFsvE2izEk1_I5MFuON-TBVnBeRetq83WJkbwXrdJN2c-5V5dU2AM23bdxT1xBlQivQ6odYhosrc8032As7cJUR4O7xs5F9q9fXNus57lzAK6wR3j-fea5zw6p01tgnS5EyX49-hOAu93fFdLBnmegyXJViKuArPQ9MuYZ2dKNbom85TBhOsbCkWrjNzy8pQAwr2hSgSE5yn2r7eFJcw0RINxsaDReQ-D51QD8_gHohhoTYGi1iuf9cFDWgtc_paSk2iIPYb_i4Si9fyTVN0UesQNcBo3LJ3Q5smMqdI6JGL5Y_FrXr5_qBkq5PaJtE85RoFWBR8T4v9ZpZxA4Vos4QdW9PPQ8QYWdNqfDvyNlNobDevFnoC4LXjohrcz90qfKZB2S-MYR6Cfg61W_L_sW75B7CfWgO5QTQWdqADoMRvr99Vt8bCvyfzjVD_Bz5Fpduj-3aaNMsCGbi4QYmLIRr3GTCQQKWGQsNU4a3KRaLZPwOZHgJ2R6IrzsAzIkGJLREMuQjtnuRPnSny3yAv9ymLd-SYpvuYAGidrgW42Nozc0gsU3hSaABn35l8TzepRTRYA6gvwGG5BYCmWBCa61Z4mgeI6Jn_2tYce7wVyH78pEB7DpSJEzVsVPrzVhxHAOp-NYBtu3KgYLTtbP9VaQGt0az83CpmOvreJ8xPPAzuzDFiX2PBsAJY4RlhEe4DkuiUBcFjiUYAe82aIxp6y5XvfmNBpXI9VyAvI5CQUiezqSxtt3LbqIg1TxydU_UhAl7RjZNA_7Q8aQ3ndjEGrh71CkyajFnwFCDspVVWUmGqg0Z6pErr85Z5hkpliJUrIQnRXP1yGru4Y_fn05SChhqI_-k6J8JhsiVUVAWwZr_3DejBVbHF1mBCY_v1ZcTa-FcYkjcaZkvApE6RnkdaVAPKe-IzJVwvf_-UU_pEJu3zz6vXmtr2Ambj7Ouw_LvHLgrrzwLwDgKzAkRBKndYewxByzaX3aUWUJl-fZ4EZk1DgJYPnmwe89PcGPT_SKDuxTppV8eRdAza5U5dk1JIIzfbtuomafGsYig3zwN74TcMImhIKWn7YmKDqqmX2zdwZQhrq7AzSlTs_veDxoPAH7bEgsZW9sY6fYrboHR0IoBXP9X2S397pxvZ1TlTnoFGrLM78KsXtcU0600GuvwdZJcBS8yXwtr11s3A0E_g6seGLzEP_41etILE8IjQMzLdARdPRrxZodRIjdYrHP_Xh2NjBJjsGWmKeCzne3dj5deoQQoh5tBIy-vbxS-SLGGdgtjcutXnaTMy3Gz_1d_A8HzRD_ohKO8p91OH7hgjFKPwXLMTWPFYM1el98Gp9yztGB1r0TNbE3W7OO5_corJ5px7EQ9V40CC9tfOV8WZWgJJhRAJgFG9s5j5lOgnwFgJlY8MUxZLNBES5HewviIR3r27hrD7OdwPhbZWTu5pxK4hgh-3XdNUVl3Rgm4GlcoCf4Gi_XL7sk5PffcOgtO84QwbPtp-uN3ooz5sZNE1uoxbALgQppG4pQqhRayScIJ8FDyfWMzZxvl0nstx7JMndjWIZ9juhbKUKoYyl_v6zcA7O5cuM0U7Q5DYKFD0vXYxLxhRk2xoMjpoRhDmeFZ_Pumdg3eMTCMoljiDPTn9UqEDlDnAScoos4-aHWlRJlo9WlLri9TzZDmgH4vQs98EcYDi3akCta4Y0XGSEo0Y22NYKn-uUHbHbelx4f5-KivN-3hxJhPdMrRj8sFc_lqYa7zmbCCFXx2bg4A374l9i8D-NUuR4TQgaE53IVHmNW-YLV00eo6jIM06voBpE-vk_e51MXWKfh_D4PYJpgN5fOYIkfdi3hE-SSrXeyUBTPMmZepR_7HNKnnKl2eHQWzjg3CGl0nGkoxo464o5HVJ24PXgWwuylItLtHsKrgwfDoG-_7KpCDtsHX3tjlNlY2ERwwRgxIbuFsuB6wpRGaZ8aC5XCcCkzlpDR2zeK1q9Tub6bO1pOrkN6RQEM1zc1xHAdKpEgvLUY2EwAP_SZWfyTtpCXC_0NOlQDx7BlD5baVNoeptaZZIRF4tw46xdiJuzj5zFYW4Wccod0LVRXkcy-2xFjC0TY__DNipV6G9Jqxbr_D8-aTwItyAi9AfxhhRME3iRcmIxX80PfoYfgnsRmUKHh-RrbaCGoOWLKNZg8o3tl8jX403obx6BlK2gG8FwO7653RYWIm7lv-AA2K53XY_m3urw_iwOGULHrjroiI8PqCqT2BdZRtd94y9iRd1aJQX7Otawe8nt-lPWdg9WxTpvybQnuIE5yysY3a3ye3PF6EjMC3PxqLpNxZoyADflK_df_LzrG1BenN0bQJHuGpXpRwhskOHc15LClpNzH78LgOXFIePgCyexrcvL5iPvIlX1SIUpP4SggcO75oY46jmvOfmCTSYUilOozuy_hwoK_O0qWzcCqAgkuk5LXc2gCVroNb8QWaSA7v8yFwAtl5X-9EPjyv5Q9m0aFh6fU42IVVdrCaIXZaOMQwNtPX71c_DA3S2oXahXgoYGWaP3K7HYpDPUi611hjWcC-jCn5SEgRO506iw9dI24aDTpc56j0Khjf-zNtb9p_cNht6XqS0knrUp5GoXO4CCulzJJBbBATOzFZLke_-0D6UR-zblwQ44MlWTAbFgjHIe-rSzLr4cPCmqaJvxoP9Ytf4PW0nv7evzgXX5lPgTIcXzP7BW43luuiD8VJSOEdlceGh6PDfEdVcMfYm3hfDG05oEimD4gDs1WUmzLB3k4eWiktjfyAJTxnIZ52AQ2u6cWcmGfqhjcvC1KAssEoNrP8YcnS3tz2LyDh_Qpbe3O1IfVCjGIx8kNsduTJo55FDQ0SkkESZIWlpYCz02Qq6_cJHkemdcmoQbiMOqXwRzaS94pymKP9OPnb3-9xBTL4u4BEp5FA30Z7KZLbgJd5sRGUdtRsOJJ1YVvIWoL120ImEgozLbucWXdiXCURsdTJmQTWICG_b1QzPPGVT-RSUrHqZ0aQikChyJslf3uOfURpfHKTZqgPjDt7V34_A5IhiV_wJvPknK5MeU6DFNd936WUn9ZMLh5jcIx7h-Cp9etk9tGL4JLEIfmiRomdXxhe56VaijeYHPDiNEDFZr4gXk_jlaEE56QBVMxpiDQQMDhp7sW8OlKm1uMuWg5mxcdvczejj7ad6C4eIPTnQzJl0u1umw60pK2zwtLrdaA7MZdboV_NKrDWe5NYB2Vvuo_WC6QDSpF-RTwDkfF8c3HZTpyphFYHIfuV3lnP_ET9buSA7wkGWvMfy_rCJkVlpbu7nOBAYA2RQtoBRkKDFn1Ddz2SuxgpGhKn9-s2rbxHG1TmspsYFRqZ5bruj_1M8OTXC0mk144GzdzvQg6WvIuvqexvfLfteCFAnDo1ft60WQn_62goFNsgoqGEGQml-usKX_IKDEairAWA1tGA8de9TOH-c5Dv7HEHFeGhKxi_WrJ3biORVvC1c_QS9_mHZDDLkAtqQyusXLKBEe-ylFd6QI3ePx8CykRR-jIU-IgKHraRbefe3UuzytjDUbF2_g.fmGYBtcx34RnWZLZGaNGaQ",
+            "eligibleForMobileBoardingPass": false
+        }
+    },
+    "success": true,
+    "notifications": null,
+    "uiMetadata": {
+        "proxyLogout": true,
+        "chapiVersion": "1.14.0",
+        "maintenance": false,
+        "group-checkin": true
+    }
+}
+
+INVALID CONFIRMATION NO:
+{
+    "data": null,
+    "success": false,
+    "notifications": {
+        "formErrors": null,
+        "fieldErrors": [
+            {
+                "severity": "ERROR",
+                "code": "VALIDATION__CONFIRMATION_NUMBER__DOES_NOT_MATCH",
+                "target": "confirmationNumber",
+                "trackingCode": "400306993",
+                "infoList": [],
+                "formError": false,
+                "infoSize": 0
+            }
+        ],
+        "messages": null,
+        "empty": false
+    }
+}
+
+EXPIRED CONFIRMATION NO:
+
+{
+    "data": null,
+    "success": false,
+    "notifications": {
+        "formErrors": [
+            {
+                "severity": "ERROR",
+                "code": "ERROR__RESERVATION_NOT_FOUND",
+                "target": "",
+                "trackingCode": "404611301",
+                "infoList": [],
+                "infoSize": 0,
+                "formError": true
+            }
+        ],
+        "fieldErrors": null,
+        "messages": null,
+        "empty": false
+    },
+    "uiMetadata": {
+        "proxyLogout": true,
+        "chapiVersion": "1.14.0",
+        "maintenance": false,
+        "group-checkin": true
+    }
+}
+
+
+
+
+
+

@@ -4,7 +4,7 @@ from datetime import datetime, timedelta
 import os
 from apscheduler.schedulers.background import BackgroundScheduler
 import html
-import crawler
+import swa-review-api
 
 schedr = BackgroundScheduler()
 
