@@ -1,10 +1,10 @@
 import logging
-from datetime import datetime, timedelta
 # import datetime as dt
 import os
+from datetime import datetime, timedelta
+
 from apscheduler.schedulers.background import BackgroundScheduler
-import html
-import swa-review-api
+from swa_review_client import fetch
 
 schedr = BackgroundScheduler()
 
@@ -34,5 +34,7 @@ def schedule_job(entry):
     # alarm_time = date_time_requested + timedelta(seconds=10)  # Testing
 
     logging.info("Your job will run the job at: {0}".format(alarm_time))
-    schedr.add_job(crawler.crawl_checkin_page, 'date', run_date=alarm_time,
-                   args=[entry['confirmationNumber'], entry['firstName'], entry['lastName'], entry['phoneNumber']])
+    schedr.add_job(fetch,
+                   'date',
+                   run_date=alarm_time,
+                   args=[entry['confirmationNumber'], entry['firstName'], entry['lastName']])
